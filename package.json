@@ -1,0 +1,22 @@
+{
+  "name": "functional-javascript",
+  "version": "0.0.1",
+  "description": "Automate task runner",
+  "main": "app.js",
+  "scripts": {
+    "test": "'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishabhravindra/functional-javascript.git"
+  },
+  "author": "Rishabh Ravindra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishabhravindra/functional-javascript/issues"
+  },
+  "homepage": "https://github.com/Rishabhravindra/functional-javascript#readme",
+  "dependencies": {
+    "get-stdin": "^5.0.1"
+  }
+}

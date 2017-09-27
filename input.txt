@@ -1,0 +1,3 @@
+getElement Krypton
+getSymbol Krypton
+getAtomicNumber Carbon

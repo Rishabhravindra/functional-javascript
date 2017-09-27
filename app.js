@@ -1,42 +1,48 @@
+const getStdin = require('get-stdin');
+
+var promise = getStdin();
+promise.then(str => {
+// initialize the chemical element variable with a string
+var elementList =["Carbon", "C",  6 ];
 // function that takes another function and a data type as an argument
 // returns someAction()
 function doSomething(someAction, element) {
+	someAction = eval(someAction);
  return someAction(element);
 }
 
 // return element object
 function getElement(el) {
-  return elementList[el];
+  return elementList[0];
 }
 
 // return element symbol
 function getSymbol(el) {
-   return elementList[el].symbol;
+
+   return elementList[1];
 }
 
 // return atomic number
 function getAtomicNumber(el) {
-   return elementList[el].atomicNumber;
+   return elementList[2];
 }
 
-// initialize the chemical element variable with a string
-var elementList ={ "Carbon":{ "symbol": "C",
-                              "atomicNumber": 6 },
-                 "Krypton":{ "symbol": "Kr",
-                              "atomicNumber": 36 }}
-var element = "Carbon";
 
-// call the doSomething function and pass getElement() as a parameter
-var elemObject = doSomething(getElement, element);
-console.log(elemObject);
-// "Carbon"
+// run initialize function after input is read
+    var commandList = [];
+        commandList = str.split("\n");
 
-// call the doSomething function and pass getSymbol() as a parameter
-var symbol = doSomething(getSymbol, element);
-console.log(symbol);
-// C
+    for (var i = 0; i < commandList.length; i++) {
+        commandList[i] = commandList[i].split(" ");
+    }    
+	commandList.pop();
 
-// call the doSomething function and pass getAtomicNumber() as a parameter
-var atNumber = doSomething(getAtomicNumber, element);
-console.log(atNumber);
-// 6
+	commandList.forEach(
+		function(data) { console.log(  doSomething(data[0], data[1]))
+		});
+	
+	// for (var i =0; i<commandList.length; i++){
+	// 	console.log(doSomething(commandList[1][0], commandList[1][1]));
+	// }
+	}
+);
